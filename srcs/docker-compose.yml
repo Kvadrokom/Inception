@@ -6,12 +6,12 @@ networks:
 
 volumes:
         wordpress:
-                name: wordpress
-                driver: local
-                driver_opts:
-                        device: /home/skharjo/data/wordpress
-                        o: bind
-                        type: none
+                # name: wordpress
+                # driver: local
+                # driver_opts:
+                #         device: /home/skharjo/data/wordpress
+                #         o: bind
+                #         type: none
         mariadb:
                 # name: mariadb
                 # driver: local
