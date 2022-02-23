@@ -44,6 +44,7 @@ services:
             - localhost
     image: mariadb
     restart: always
+    env_file: .env
   wordpress:
     depends_on:
             - mariadb
@@ -55,3 +56,4 @@ services:
     networks:
             - localhost
     restart: always
+    env_file: .env
