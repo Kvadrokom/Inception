@@ -7,3 +7,6 @@ fclean: clean
 	sudo docker rmi -f $(sudo docker images -qa)
 	sudo docker volume rm $(docker volume ls -q)
 	sudo docker system prune -a --force
+
+enter:
+	docker exec -ti $(CONTAINER_NAME) bash
