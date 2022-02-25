@@ -1,5 +1,5 @@
 chown -R mysql:mysql /var/lib/mysql
-if ! [ -f "/var/lib/mysql/wordpress" ]; then
+if ! [ -d "/var/lib/mysql/wordpress" ]; then
     service mysql start
     mysql -u root -e "CREATE DATABASE IF NOT EXISTS $DB_NAME DEFAULT CHARACTER SET utf8;"
     mysql -u root -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';"
