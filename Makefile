@@ -2,7 +2,7 @@
 all:
 	sudo mkdir /home/skharjo/data/wordpress
 	sudo mkdir /home/skharjo/data/mariadb
-	sudo docker-compose -f ./srcs/docker-compose.yml up
+	sudo docker-compose -f ./srcs/docker-compose.yml up -d
 clean:
 	docker-compose -f srcs/docker-compose.yml down
 	sudo rm -rf home/skharjo/data/wordpress
