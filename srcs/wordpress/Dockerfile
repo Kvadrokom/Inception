@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update
 
-RUN apt-get -y install php7.3 php-mysqli php-fpm mariadb-client curl
+RUN apt-get -y install php7.3 php-mysqli php-fpm mariadb-client curl vim
 COPY ./www.conf /etc/php/7.3/fpm/pool.d
 
 ADD https://ru.wordpress.org/wordpress-5.7.2-ru_RU.tar.gz /var/www/
