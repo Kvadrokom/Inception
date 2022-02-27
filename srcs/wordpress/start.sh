@@ -4,3 +4,6 @@ if ! [ -f "/var/www/wordpress/wp-config.php" ]; then
     wp user create ${MYSQL_USER} ${USER_EMAIL} --allow-root --role=subscriber --user_pass=${MYSQL_PASSWORD}
 fi
 /usr/sbin/php-fpm7.3 --nodaemonize
+
+#docker without sudo:
+#sudo chmod ug+s /usr/bin/docker

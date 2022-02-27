@@ -1,7 +1,6 @@
 
 all:
-	sudo mkdir /home/skharjo/data/wordpress
-	sudo mkdir /home/skharjo/data/mariadb
+	bash makedirvol.sh
 	sudo docker-compose -f ./srcs/docker-compose.yml up -d
 clean:
 	docker-compose -f srcs/docker-compose.yml down
