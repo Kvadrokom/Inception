@@ -13,3 +13,12 @@ fclean: clean
 
 enter:
 	docker exec -ti $(CONTAINER_NAME) bash
+
+enter_wp:
+	docker exec -ti `docker ps --filter name=wordpress | grep [0-9]` bash
+
+run:
+	docker run wp
+
+build:
+	docker build -t wp srcs/wordpress/

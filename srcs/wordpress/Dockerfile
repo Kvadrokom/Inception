@@ -15,7 +15,7 @@ RUN chmod +x wp-cli.phar
 RUN mv wp-cli.phar /usr/local/bin/wp
 
 RUN rm -f /var/www/wordpress/wp-config-sample.php
-COPY start.sh /
+COPY ./start.sh ./var/www/wordpress
 WORKDIR /var/www/wordpress
 RUN mkdir /run/php/
-CMD	/start.sh
+CMD	./start.sh
