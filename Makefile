@@ -3,7 +3,7 @@ all:
 	bash makedirvol.sh
 	sudo docker-compose -f ./srcs/docker-compose.yml up -d
 clean:
-	docker-compose -f srcs/docker-compose.yml down
+	sudo docker-compose -f srcs/docker-compose.yml down
 	sudo rm -rf home/skharjo/data/wordpress
 	sudo rm -rf home/skharjo/data/mariadb
 fclean: clean
