@@ -8,7 +8,7 @@ clean:
 	sudo rm -rf home/skharjo/data/mariadb
 fclean: clean
 	sudo docker rmi -f $(sudo docker images -qa)
-	sudo docker volume rm $(docker volume ls -q)
+	sudo docker volume rm $(sudo docker volume ls -q)
 	sudo docker system prune -a --force
 
 enter:
