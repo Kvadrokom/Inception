@@ -9,7 +9,7 @@ clean:
 	sudo rm -rf home/skharjo/data/wordpress
 	sudo rm -rf home/skharjo/data/mariadb
 fclean: 
-	remove.sh
+	./remove.sh
 enter:
 	docker exec -ti $(CONTAINER_NAME) bash
 
